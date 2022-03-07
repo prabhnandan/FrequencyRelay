@@ -1,0 +1,18 @@
+13:21:38 **** Incremental Build of configuration Nios II for project frequencyrelay ****
+make all 
+Info: Building ../frequencyrelay_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../frequencyrelay_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../frequencyrelay_bsp//HAL/inc -I../frequencyrelay_bsp/ -I../frequencyrelay_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mhw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Linking frequencyrelay.elf
+nios2-elf-g++  -T'../frequencyrelay_bsp//linker.x' -msys-crt0='../frequencyrelay_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../frequencyrelay_bsp/   -Wl,-Map=frequencyrelay.map   -O0 -g -Wall   -mhw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o frequencyrelay.elf obj/default/freertos/croutine.o obj/default/freertos/event_groups.o obj/default/freertos/heap.o obj/default/freertos/list.o obj/default/freertos/port.o obj/default/freertos/queue.o obj/default/freertos/tasks.o obj/default/freertos/timers.o obj/default/main.o obj/default/freertos/port_asm.o -lm -msys-lib=m
+nios2-elf-insert frequencyrelay.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 7 --sidp 0x430f0 --timestamp 1393900972 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2 --quartus_project_dir "C:/Users/Prabh/Desktop/723A1/freq_relay_27" --sopcinfo C:/Users/Prabh/Desktop/723A1/freq_relay_27/software/frequencyrelay_bsp/../../nios2.sopcinfo
+Info: (frequencyrelay.elf) 653 KBytes program size (code + initialized data).
+Info:                      130559 KBytes free for stack + heap.
+Info: Creating frequencyrelay.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source frequencyrelay.elf >frequencyrelay.objdump
+[frequencyrelay build complete]
+
+13:21:42 Build Finished (took 3s.407ms)
+
